@@ -15,10 +15,9 @@ public class Main {
         System.out.println(list);
         */
         LinkedList list = new LinkedList();
-        list.insertF(8);
-        list.insertF(9);
-        list.insertF(10);
-        list.replaceAt(0,11);
+        list.insertAtStart(8);
+        list.insertAtStart(9);
+        list.insertAtStart(10);
         list.show();
 
     }

@@ -3,11 +3,10 @@ public class LinkedList {
     Node head; // first node
 
     // inserts node at the end!
-    public void insertF(int data) {
-        Node node = new Node(); // creates new node obj
-        node.data = data;   // assigns integer to node.data
-        // Now the question is where do we put this node?!
+    public void insertAtEnd(int data) {
+        Node node = new Node(data); // creates new node obj
 
+        // Now the question is where do we put this node?!
         // CASE 1: First Node to be added
         if (head == null) {
            head = node;
@@ -19,7 +18,16 @@ public class LinkedList {
             }
             n.next=node;
         }
-    } // end of  insertF function
+    } // end of  insertAtEnd function
+
+    public void insertAtStart(int data) {
+        // need new node
+        Node node = new Node(data);
+        // sets new nodes next pointer to the first node
+        node.next = head;
+        // makes head and node point to the same memory address
+        head = node;
+    }
 
     // if given index longer than list it will only replace last node
     // replaces data in existing node
@@ -34,9 +42,7 @@ public class LinkedList {
         h.data = data;
     } // end of replace at function
 
-    // now we need to insert node in new node
-
-
+    // now we need to insert node in LL
 
     public void show() {
         Node node = head;
