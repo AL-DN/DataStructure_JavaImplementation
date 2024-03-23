@@ -42,14 +42,32 @@ public class LinkedList {
         h.data = data;
     } // end of replace at function
 
-    // now we need to insert node in LL
-
-    public void show() {
-        Node node = head;
-        while(node.next!=null) {
-            System.out.println(node.data);
-            node = node.next;
+    public void countNodes() {
+        int count;
+        if(head == null) { // if list is empty
+            count = 0;
+        } else {
+            Node n = head;
+            count = 1;
+            while(n.next!=null) {
+                count+=1;
+                n=n.next;
+            }
         }
-        System.out.println(node.data);
+
+        System.out.println(count);
     }
+    public void show() {
+        try {
+            Node node = head;
+            while(node.next!=null) {
+                System.out.println(node.data);
+                node = node.next;
+            }
+            System.out.println(node.data);
+        } catch (NullPointerException e) {
+            System.out.println("There are no nodes in LinkedList to show.");
+        }
+
+    } // end of show()
 }

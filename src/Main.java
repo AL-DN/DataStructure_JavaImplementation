@@ -15,10 +15,8 @@ public class Main {
         System.out.println(list);
         */
         LinkedList list = new LinkedList();
-        list.insertAtStart(8);
-        list.insertAtStart(9);
-        list.insertAtStart(10);
         list.show();
+        list.countNodes();
 
     }
 
