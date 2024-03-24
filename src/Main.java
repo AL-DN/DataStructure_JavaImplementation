@@ -8,13 +8,17 @@
 
 public class Main {
     public static void main(String[] args) {
-        /* java built-in linked list
         LinkedList list = new LinkedList();
-        list.add(5);
-        list.add(0,12);
-        System.out.println(list);
-        */
-        LinkedList list = new LinkedList();
+        list.show();
+        list.insertAtStart(3);
+        list.show();
+        list.insertAtStart(2);
+        list.show();
+        list.insertAtStart(1);
+        list.show();
+        list.insertAtEnd(4);
+        list.show();
+        list.replaceAt(2,2);
         list.show();
         list.countNodes();
 
