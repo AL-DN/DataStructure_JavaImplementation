@@ -84,7 +84,6 @@ public class LinkedList {
         try {
             Node node = head;
             String list = "";
-            // this is also faulty because  if there is only one node its node.next will be null
             while(node.next != null) { // this throws NullPointerException b/c it is trying to access node.next on a node that doesnt exist
                 String num = Integer.toString(node.data);
                 list  += num+" ";

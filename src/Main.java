@@ -1,8 +1,8 @@
 // Author: Alden Sahi
 // Date: 03/20/2024
-// Project: LinkedList Implementation in Java
-// Project Description: We will create a LinkedList in java to dynamically store data.
-// This is for practice to help reinforce emy understanding of data structures.
+// Project: Data Structure Implementation in Java
+// Project Description: We will make our own java implementation of LinkedList, Stack, and Queue.
+
 
 
 
@@ -27,8 +27,9 @@ public class Main {
         Stack stacky = new Stack();
         stacky.push(8);
         stacky.push(2);
-        System.out.print(stacky.pop());
         stacky.show();
+        System.out.println(stacky.pop());
+        System.out.println(stacky.peek());
     }
 
 }
