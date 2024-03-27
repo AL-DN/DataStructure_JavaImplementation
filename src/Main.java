@@ -8,7 +8,7 @@
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        /* LinkedList list = new LinkedList();
         list.show();
         list.insertAtStart(3);
         list.show();
@@ -20,8 +20,15 @@ public class Main {
         list.show();
         list.replaceAt(2,2);
         list.show();
-        list.countNodes();
+        list.insertAtIndex(1,4);
+        list.show();
+        list.countNodes(); */
 
+        Stack stacky = new Stack();
+        stacky.push(8);
+        stacky.push(2);
+        System.out.print(stacky.pop());
+        stacky.show();
     }
 
 }

@@ -25,11 +25,32 @@ public class LinkedList {
     public void insertAtStart(int data) {
         // need new node
         Node node = new Node(data);
-        // remember head isa pointer that stores a memory address which allows us to be able to assign it to another pointer node.next
+        // remember head is a pointer that stores a memory address which allows us to be able to assign it to another pointer node.next
         // this makes our new node point to the mem address of the original first node
         node.next = head;
         // makes head point to the memory address of our new node now completing the links and making it the first node!!
         head = node;
+    }
+
+    public void insertAtIndex(int index,int data){
+        //create a node
+        Node node = new Node(data);
+        Node n = head;
+        if(index == 0){
+            node.next = head;
+            head = node;
+        } else {
+            // iterate to index before node will be inserted (we will put node in between this one and next)
+            for(int i=0; i<index-1;i++) {
+                n = n.next;
+            }
+            // connect new nodes next pointer to n.next
+            node.next = n.next;
+            // connect the node pointed to by n to node
+            n.next = node;
+        }
+
+
     }
 
     // if given index longer than list it will only replace last node
@@ -63,10 +84,10 @@ public class LinkedList {
         try {
             Node node = head;
             String list = "";
-            // this is also faulty because the if there is only one node its node.next will be null
+            // this is also faulty because  if there is only one node its node.next will be null
             while(node.next != null) { // this throws NullPointerException b/c it is trying to access node.next on a node that doesnt exist
                 String num = Integer.toString(node.data);
-                list += num+" ";
+                list  += num+" ";
                 node = node.next;
             }
             // need to add last node / if there is only one node since these both have null pointers
