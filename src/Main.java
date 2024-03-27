@@ -24,12 +24,20 @@ public class Main {
         list.show();
         list.countNodes(); */
 
-        Stack stacky = new Stack();
+        /* Stack stacky = new Stack();
         stacky.push(8);
         stacky.push(2);
         stacky.show();
         System.out.println(stacky.pop());
         System.out.println(stacky.peek());
+        System.out.println(stacky.isEmpty()); */
+
+        Queue queue = new Queue();
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        queue.show();
+
     }
 
 }

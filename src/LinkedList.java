@@ -88,11 +88,11 @@ public class LinkedList {
                 String num = Integer.toString(node.data);
                 list  += num+" ";
                 node = node.next;
-            }
-            // need to add last node / if there is only one node since these both have null pointers
-            list += Integer.toString(node.data);
-            System.out.println("The current list is " + list);
-            } catch (NullPointerException e) {
+    }
+    // need to add last node / if there is only one node since these both have null pointers
+    list += Integer.toString(node.data);
+            System.out.println("The current list is = " + list);
+} catch (NullPointerException e) {
             System.out.println("There are no nodes in LinkedList to show.");
             }
 

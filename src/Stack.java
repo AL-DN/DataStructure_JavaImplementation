@@ -32,10 +32,19 @@ public class Stack {
             }
             // need to add last node / if there is only one node since these both have null pointers
             list += Integer.toString(node.data);
-            System.out.println("The current Stack is " + list);
+            System.out.println("The current Stack is = " + list);
         } catch (NullPointerException e) {
-            System.out.println("There are no nodes in LinkedList to show.");
+            System.out.println("There are no nodes in Stack to show.");
         }
 
     } // end of show()
+
+    public boolean isEmpty(){
+        if(top == null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
